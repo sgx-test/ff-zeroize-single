@@ -1,0 +1,24 @@
+[package]
+name = "ff-zeroize"
+version = "0.6.3"
+authors = ["Sean Bowe <ewillbefull@gmail.com>"]
+description = "Library for building and interfacing with finite fields"
+readme = "README.md"
+documentation = "https://docs.rs/ff-zeroize/"
+homepage = "https://github.com/algorand/ff-zeroize"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/algorand/ff-zeroize"
+edition = "2018"
+
+[dependencies]
+byteorder = "1"
+ff_derive-zeroize = { version = "0.6.2", path = "ff_derive", optional = true }
+rand_core = "0.5"
+zeroize = {version = "1.1", features = ["zeroize_derive"]}
+
+[features]
+default = []
+derive = ["ff_derive-zeroize"]
+
+[badges]
+maintenance = { status = "actively-developed" }
